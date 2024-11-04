@@ -1,0 +1,49 @@
+/* body display in block, also working */
+/* body {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column; /* Add this line to stack header and section vertically */
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem; /* Add some space between header and wrapper */
+}
+
+.challenge-title {
+  margin: 0; /* Remove default margin */
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: clamp(calc(320px - 3rem), 75%, 70ch);
+  height: calc(75vh - 2.5rem);
+  border: 0.5rem solid black;
+  /* display: flex;
+  justify-content: center; */ /* (1) */
+  display: grid;
+  /* justify-items: center;
+  align-items: center; */ /* (2) */
+}
+
+.child {
+  padding: 0 2rem;
+  width: 50%;
+  border: 0.5rem solid red;
+  justify-self: center;
+  align-self: center; /* (3) self method */
+}
